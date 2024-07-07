@@ -16,7 +16,16 @@ To verify the integrity of the customer data, we will create two measures:
 
 Here are the DAX formulas for these measures:
 
+
+
 ```dax
 Customer ID = COUNT('Databel – Data'[Customer ID])
 Unique Cx = DISTINCTCOUNT('Databel – Data'[Customer ID])
+```
+The visualization shows as:
+<br>
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/efb0de97-9601-43ec-a417-691633c66cdb)
 
+</div>
