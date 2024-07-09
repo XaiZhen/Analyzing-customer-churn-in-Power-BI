@@ -1,4 +1,4 @@
-# Analyzing-customer-churn-in-Power-BI
+
 
 # Data Analysis for Customer Churn
 
@@ -49,3 +49,36 @@ Churn Rate = [Number of Churned Customers] / [Unique Cx]
 ```
 
 By following the steps above, you can ensure your dataset does not contain duplicate customer IDs, and accurately calculate churn metrics. If duplicates are found or other issues arise, further data cleaning and investigation may be necessary.
+
+
+## Second Step: Explore Data
+
+### 1. Clustered Bar Chart of Churn Reasons
+
+As shown in the graph below, a clustered bar chart has been created to show the reasons why customers become churned:
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/7e925238-5ccc-41d5-8653-ac593077771c)
+
+
+</div>
+
+### 2. Map Visualization of Churn Rates by State
+I created a map visualization to identify the states with higher churn rates.
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/e922c6ea-25f0-45ca-8744-a9967deda1ee)
+
+</div>
+
+### 3. Insights from Discovered Data
+
+I found some key insights from the data analysis:
+
+1. The churn rate for Databel is approximately 27%.
+2. About 45% of the reasons why customers churn are related to competitors (e.g., competitors have better products, better prices, or better offers).
+3. The churn rate in California is abnormally high, exceeding 60%.
+
+
+
+
