@@ -80,5 +80,23 @@ I found some key insights from the data analysis:
 3. The churn rate in California is abnormally high, exceeding 60%.
 
 
+## Third Step: Dive Deep to Discover the Data & Analyze Data
 
+### 1. Categorizing Demographics by Age
+In this step, I gathered the categorized demographic variables related to age in a new column called 'Demographics'. I used the IF() function to create a column with three categories: "Senior", "Under 30", and "Other".
+
+Here is the DAX formula:
+
+```dax
+Demographics = 
+IF(('Databel - Data'[Senior]) = "Yes", "Senior", 
+    IF(('Databel - Data'[Under 30]) = "Yes", "Under 30", 
+        "Other"
+    ))
+```
+Check the Graph below
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/0de86f92-771d-42d8-9ba9-ea20b702219b)
+</div>
 
