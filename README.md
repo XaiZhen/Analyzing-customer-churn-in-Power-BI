@@ -100,3 +100,54 @@ Check the Graph below
 ![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/0de86f92-771d-42d8-9ba9-ea20b702219b)
 </div>
 
+
+### 2. Creating Age Bins and Visualizing Customer Data
+
+I created bins for the 'Age' column, choosing a bin size of 3. Then, I designed a line and stacked column chart to show the number of customers and churn rate for each age bracket. From the visualization, I found that the age bracket 25 has the highest number of customers.
+
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/95ddb6ce-3459-413c-a74d-22262f44b8ae)
+
+</div>
+
+### 2. Analyzing Group Membership Impact on Phone Bill and Churn Rate
+
+Now I want to analyze whether customers who are part of a group have a lower phone bill and if this impacts the churn rate. Please check the line and stacked column chart below.
+
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/4dd78e3c-29e2-4216-a337-82e627f9f673)
+
+
+</div>
+
+### 3. Analyzing the Impact of Contract Types on Churn Rate
+
+Since there are three different contract types:
+
+- One year
+- Two year
+- Month-to-month
+  
+I decided to consolidate the values of yearly contracts into one category. This allows us to observe the differences between customers with yearly contracts and those with monthly contracts.
+
+Firstly, I created a new column called "Contract Category" using the SWITCH() function to categorize the contract types. The DAX function looks like this:
+```dax
+Contract Category = SWITCH('Databel - Data'[Contract Type], "One Year", "Yearly", "Two Year", "Yearly", "Month-to-month", "Monthly")
+```
+To observe how yearly and monthly contracts affect the churn rate, I used a multi-row card visualization to show the differences. Please refer to the figure below.
+
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/fe8d2d89-0017-4a68-9e6f-721025b502a3)
+
+</div>
+
+It can be seen that customers with monthly contracts have a higher churn rate than those with yearly contracts. Additionally, I created a clustered column chart to analyze how churn rates differ by contract category and gender. As shown in the graph below, females with monthly contracts have the highest churn rate, at 47.31%.
+
+<div align="center">
+  
+![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/14b37657-446e-480a-8304-2621d167f1a4)
+
+</div>
