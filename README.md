@@ -213,3 +213,35 @@ Firstly, I created a line chart using the account length and churn rate to evalu
 
 ![image](https://github.com/user-attachments/assets/f5a0e00e-d730-4dd9-ac4b-c847adbe3f38)
 </div>
+
+
+## Forth Step: Create Dashboard
+
+### 1.Dashboard that explains how different churn categories, types of contracts, reasons, and states can affect Churn
+<div align="center">
+  
+![image](https://github.com/user-attachments/assets/c43fa95d-5386-4f58-8ab6-bdd0bb0f5284)
+
+</div>
+
+### 2.Dashboard that portrays insights about the age buckets and groups
+<div align="center">
+  
+![image](https://github.com/user-attachments/assets/53683e37-e3e2-48a2-9edd-318d9ed36f57)
+
+</div>
+
+### 3.Dashboard regards customer service calls
+<div align="center">
+  
+![image](https://github.com/user-attachments/assets/a877606f-0904-4782-8921-138c215ce872)
+
+</div>
+
+### 4.Dashboard regards Data and any relevant extra charges
+<div align="center">
+  
+![image](https://github.com/user-attachments/assets/d5e194a7-71b7-47ef-94e0-565bf59fe90d)
+
+
+</div>
