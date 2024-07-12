@@ -151,3 +151,65 @@ It can be seen that customers with monthly contracts have a higher churn rate th
 ![image](https://github.com/XaiZhen/Analyzing-customer-churn-in-Power-BI/assets/157572976/14b37657-446e-480a-8304-2621d167f1a4)
 
 </div>
+
+
+### 4. Investigating the Influence of Unlimited Data Plan on Churn Rate
+
+To investigate how the 'unlimited data plan' influences the churn rate, I created a Table visualization to check the churn rate for customers with and without the unlimited plan. As shown in the table, customers on an unlimited plan are more likely to churn.
+
+<div align="center">
+
+![image](https://github.com/user-attachments/assets/8219d2b5-c489-4a28-b94f-95fb9eccf709)
+
+</div>
+
+To explore if this is related to a certain amount of mobile data (GB) usage, I created a new column 'Grouped Consumption' that classifies the average monthly GB download into the following groups:
+
+- Less than 5 GB
+- Between 5 and 10 GB
+- 10 or more GB
+
+The DAX formula used is:
+```dax
+Grouped Consumption = IF('Databel - Data'[Avg Monthly GB Download] < 5, "Less than 5 GB", 
+    IF('Databel - Data'[Avg Monthly GB Download] < 10, "Between 5 and 10 GB", 
+        "10 or more GB"
+    )
+)
+```
+
+Next, I created a clustered bar chart to visualize the 'Churn Rate' by 'Unlimited Data Plan' and by the different groups of the newly created column.
+<div align="center">
+
+![image](https://github.com/user-attachments/assets/a54d55b9-65ac-41e9-b7bc-d180c1c17569)
+
+</div>
+
+
+### 5. Analyzing the Impact of International Activity on Customer Churn
+
+Moreover, it is essential to understand the international activity of customers and its relationship to churn. I want to analyze the behavior of customers who make international calls and determine if paying for an international plan influences their loyalty.
+
+Firstly, I created a matrix that shows the churn rate by the variables 'Intl Plan' and 'Intl Active'. Then, I added a map visualization to display the different churn rates for each state.
+
+As shown in the figure below, California (CA) has a particularly high percentage of churners. Additionally, 72% of customers who actively make international calls do not have an international plan.
+
+<div align="center">
+
+![image](https://github.com/user-attachments/assets/a586e0b4-fe05-480b-9568-a28cf465cbd0)
+
+</div>
+
+In this case, I would advise Databel to contact customers who are on an international but have not called internationallly and propose them downgrade their plan
+
+
+### 6. Investigating Customer Behavior: Payment Method, Contract Type, and Account Length
+
+Now I want to investigate three important topics related to customers: the payment method, the contract type, and the duration of customer relationships.
+
+Firstly, I created a line chart using the account length and churn rate to evaluate if the churn rate decreases over time. As shown in the figure below, it appears that the churn rate does decrease over time. Next, I will investigate how this decrease varies across different types of contracts. To do this, I created another visualization - a pie chart to display the number of customers by their payment methods.
+
+<div align="center">
+
+![image](https://github.com/user-attachments/assets/f5a0e00e-d730-4dd9-ac4b-c847adbe3f38)
+</div>
